@@ -1,0 +1,13 @@
+com\company\model\OrderStatus.class
+com\company\model\Customer.class
+com\company\exception\ComplianceViolationException.class
+com\company\model\Order.class
+com\company\repository\OrderRepository.class
+com\company\exception\InvalidOrderException.class
+com\company\service\OrderServiceImpl.class
+com\company\service\ComplianceService.class
+com\company\service\PricingServiceImpl.class
+com\company\exception\OrderNotFoundException.class
+com\company\service\ComplianceServiceImpl.class
+com\company\model\OrderItem.class
+com\company\service\PricingService.class

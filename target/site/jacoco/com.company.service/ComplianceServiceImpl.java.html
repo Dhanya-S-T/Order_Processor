@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ComplianceServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">order-processing-engine</a> &gt; <a href="index.source.html" class="el_package">com.company.service</a> &gt; <span class="el_source">ComplianceServiceImpl.java</span></div><h1>ComplianceServiceImpl.java</h1><pre class="source lang-java linenums">package com.company.service;
+
+import com.company.exception.ComplianceViolationException;
+import com.company.model.Order;
+import com.company.model.OrderItem;
+
+import java.util.List;
+
+<span class="fc" id="L9">public class ComplianceServiceImpl implements ComplianceService {</span>
+
+    private static final double MAX_ORDER_AMOUNT = 500000.0;
+
+    @Override
+    public void validateOrder(Order order) {
+
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">        if (order == null) {</span>
+<span class="nc" id="L17">            throw new ComplianceViolationException(&quot;Order cannot be null&quot;);</span>
+        }
+
+<span class="pc bpc" id="L20" title="1 of 4 branches missed.">        if (order.getCustomer() == null || !order.getCustomer().isActive()) {</span>
+<span class="fc" id="L21">            throw new ComplianceViolationException(&quot;Customer is inactive&quot;);</span>
+        }
+
+<span class="fc" id="L24">        List&lt;OrderItem&gt; items = order.getItems();</span>
+<span class="pc bpc" id="L25" title="1 of 4 branches missed.">        if (items == null || items.isEmpty()) {</span>
+<span class="fc" id="L26">            throw new ComplianceViolationException(&quot;Order must contain at least one item&quot;);</span>
+        }
+
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        if (order.getTotalAmount() &gt; MAX_ORDER_AMOUNT) {</span>
+<span class="fc" id="L30">            throw new ComplianceViolationException(&quot;Order amount exceeds allowed limit&quot;);</span>
+        }
+<span class="nc" id="L32">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

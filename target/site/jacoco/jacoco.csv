@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+order-processing-engine,com.company.service,PricingServiceImpl,8,93,4,8,2,20,4,7,0,5
+order-processing-engine,com.company.service,ComplianceServiceImpl,6,40,4,8,2,9,4,4,0,2
+order-processing-engine,com.company.service,OrderServiceImpl,5,128,6,14,1,30,6,11,0,7
+order-processing-engine,com.company.exception,OrderNotFoundException,0,4,0,0,0,2,0,1,0,1
+order-processing-engine,com.company.exception,ComplianceViolationException,0,4,0,0,0,2,0,1,0,1
+order-processing-engine,com.company.exception,InvalidOrderException,0,4,0,0,0,2,0,1,0,1
+order-processing-engine,com.company.model,OrderItem,3,18,0,0,1,7,1,3,1,3
+order-processing-engine,com.company.model,Customer,3,18,0,0,1,7,1,3,1,3
+order-processing-engine,com.company.model,OrderStatus,0,15,0,0,0,3,0,1,0,1
+order-processing-engine,com.company.model,Order,3,34,0,0,1,13,1,6,1,6
